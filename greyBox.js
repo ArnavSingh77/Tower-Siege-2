@@ -1,5 +1,7 @@
-class Box{
+class greyBox{
   constructor(x, y){
+    
+    this.greyImg = loadImage("grey block.png");
     var options={
       restitution:0.1,
       density:1.2,
@@ -30,7 +32,7 @@ class Box{
       push();
       this.Visibility=this.Visibility-3;
       tint(255,this.Visibility);
-      image(this.image, this.body.position.x, this.body.position.y, 50, 50)
+      image(this.greyImg, this.body.position.x, this.body.position.y, 50, 50)
       
       pop();
     }
