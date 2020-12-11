@@ -4,6 +4,7 @@ class Box{
       restitution:0.1,
       density:1.2,
       friction:1.5,
+      this.visibility = 255;
     }
     this.body=Bodies.rectangle(x,y,30,40,options);
     this.x=x;
@@ -29,6 +30,7 @@ class Box{
       push();
       this.Visibility=this.Visibility-3;
       tint(255,this.Visibility);
+      image(this.image, this.body.position.x, this.body.position.y, 50, 50)
       
       pop();
     }
