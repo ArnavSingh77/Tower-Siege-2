@@ -2,11 +2,12 @@ class greyBox{
   constructor(x, y){
     
     this.greyImg = loadImage("grey block.png");
+    this.visibility = 255;
     var options={
       restitution:0.1,
       density:1.2,
       friction:1.5,
-      this.visibility = 255;
+
     }
     this.body=Bodies.rectangle(x,y,30,40,options);
     this.x=x;
