@@ -18,24 +18,20 @@ class blueBox{
   }
   display(){
    
-    if(this.body.speed<4){
-      
-      var angle = this.body.angle;
-      push();
-      translate(this.body.position.x, this.body.position.y);
-      rotate(angle);
-      rectMode(CENTER);
-      rect(0,0,30,40);
-      pop();
-    }
-    else{
+       if(this.body.speed>2.5)
+    {
       World.remove(world,this.body);
       push();
-      this.Visibility=this.Visibility-3;
+      this.Visibility=this.Visibility-5;
       tint(255,this.Visibility);
-      image(this.blueImg, this.body.position.x, this.body.position.y, 50, 50)
-      
+      var pos=this.body.position;
+      image(this.image,pos.x,pos.y,this.width,this.height)
       pop();
     }
+    else
+    {
+      imageMode(CENTER)
+      image(this.image,this.body.position.x,this.body.position.y,this.width,this.height)
+      super.display();
+    }
   }
-}
